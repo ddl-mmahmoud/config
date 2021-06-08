@@ -4,7 +4,7 @@ set runtimepath+=~/.vim/bundle/Vundle.vim/
 
 let laptop = "puffin"
 let hostname = system("hostname")
-let is_dark = system("readlink -f /home/med/.Xdefaults") =~ "dark"
+let is_dark = system("cat ~/.theme") =~ "dark"
 
 if is_dark
     colorscheme elflord
@@ -56,6 +56,7 @@ if hostname =~ laptop
 endif
 "Plugin 'python/black'
 Plugin 'mattn/emmet-vim'
+Plugin 'nelstrom/vim-visual-star-search'
 call vundle#end()
 
 filetype plugin indent on

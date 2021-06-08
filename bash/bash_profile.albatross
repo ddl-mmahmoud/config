@@ -15,3 +15,9 @@ bind 'set mark-symlinked-directories on'
 
 # Chrome is the browser
 export BROWSER="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --new-window"
+
+# Export keys
+[ -e "$HOME/.key-exports" ] && . "$HOME/.key-exports"
+
+# krew
+export PATH="$PATH:$HOME/.krew"
